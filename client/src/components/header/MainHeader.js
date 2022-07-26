@@ -5,6 +5,7 @@ import AdminLogin from "../admin/AdminLogin";
 import VolunteerList from "../admin/VolunteerList";
 import Login from "../auth/Login";
 import SignUp from "../auth/SignUp";
+import Blog from "../blog/Blog";
 import UserDashboard from "../dashboard/UserDashboard";
 import Donation from "../Donation/Donation";
 import Home from "../Home/Home";
@@ -19,6 +20,7 @@ const MainHeader = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/register" element={<SignUp />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="" element={<PrivateRoute />}>
           <Route path="/register/event/:id" element={<RegisterEvent />} />
           <Route path="/dashboard" element={<UserDashboard />} />

@@ -6,10 +6,9 @@ function Nav() {
   const token = sessionStorage.getItem("token");
   const navigate = useNavigate();
 
-const handleAdmin = ()=> {
-  navigate('/admin/login');
-}
-
+  const handleAdmin = () => {
+    navigate("/admin/login");
+  };
 
   return (
     <div className="">
@@ -34,13 +33,17 @@ const handleAdmin = ()=> {
                 </svg>
               </label>
             </div>
-            <div class="flex-1 px-2 mx-2">charity app</div>
+            <div class="flex-1 px-2 mx-2">
+              <Link to="/">
+                <img src="./Volunteering2.png" alt="" />
+              </Link>
+            </div>
             <div class="flex-none hidden lg:block mr-5">
               <ul class="menu menu-horizontal">
                 <li className="hover:text-primary ">
                   <Link to="/">Home</Link>
                 </li>
-                
+
                 <li className="hover:text-primary ">
                   <Link to="/blog">Blog</Link>
                 </li>
@@ -83,7 +86,9 @@ const handleAdmin = ()=> {
                     <Link to="/register" class="btn mr-3 ">
                       Register
                     </Link>
-                    <button class="btn btn-accent" onClick={handleAdmin} >Admin</button>
+                    <button class="btn btn-accent" onClick={handleAdmin}>
+                      Admin
+                    </button>
                   </>
                 )}
               </ul>
@@ -92,8 +97,6 @@ const handleAdmin = ()=> {
 
           {/* body */}
           <MainHeader />
-
-          
         </div>
         <div class="drawer-side">
           <label for="my-drawer-3" class="drawer-overlay "></label>
