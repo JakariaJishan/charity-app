@@ -66,8 +66,20 @@ function Nav() {
                       class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box"
                     >
                       <li>
-                        <Link to="/dashboard">Dashboard</Link>
+                        {sessionStorage.getItem("email") ===
+                        "jishan@gmail.com" ? (
+                          <p
+                            onClick={(e) => {
+                              navigate("/admin");
+                            }}
+                          >
+                            Admin
+                          </p>
+                        ) : (
+                          ""
+                        )}
                       </li>
+
                       <li>
                         <p
                           onClick={(e) => {

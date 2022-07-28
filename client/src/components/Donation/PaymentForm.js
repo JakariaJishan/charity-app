@@ -30,7 +30,7 @@ const PaymentForm = () => {
       })
         .then((response) => response.json())
         .then((result) => {
-          console.log(result)
+          
           alert(result.outcome.seller_message);
           navigate("/dashboard");
         })
