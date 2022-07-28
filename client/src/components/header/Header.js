@@ -76,7 +76,7 @@ function Nav() {
                             Admin
                           </p>
                         ) : (
-                          ""
+                          <p onClick={(e) => {navigate("/dashboard")}}>Dashboard</p>
                         )}
                       </li>
 
