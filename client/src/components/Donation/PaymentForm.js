@@ -14,7 +14,7 @@ const PaymentForm = () => {
     const cardElement = elements.getElement(CardElement);
     const { error, token } = await stripe.createToken(cardElement);
     if (!error) {
-     return fetch("http://localhost:5000/payment", {
+     return fetch("https://charity-world.herokuapp.com/payment", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

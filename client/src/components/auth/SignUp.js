@@ -8,7 +8,7 @@ const SignUp = () => {
   const [password, setPassword] = useState();
 
   const handleSubmit = () => {
-    fetch("http://localhost:5000/user/register", {
+    fetch("https://charity-world.herokuapp.com/user/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

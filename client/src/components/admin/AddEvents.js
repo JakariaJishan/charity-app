@@ -14,7 +14,7 @@ const AddEvents = () => {
     data.append("date", date);
     data.append("event_image", file);
 
-    fetch("http://localhost:5000/event/add-events", {
+    fetch("https://charity-world.herokuapp.com/event/add-events", {
       method: "POST",
       credentials: "include",
       headers: {

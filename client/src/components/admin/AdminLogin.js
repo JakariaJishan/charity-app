@@ -7,7 +7,7 @@ const AdminLogin = () => {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    fetch("http://localhost:5000/user/login", {
+    fetch("https://charity-world.herokuapp.com/user/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

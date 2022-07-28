@@ -10,7 +10,7 @@ const VolunteerList = () => {
   }, []);
 
   function getVolunteerList() {
-    fetch("http://localhost:5000/volunteering/all-list", {
+    fetch("https://charity-world.herokuapp.com/volunteering/all-list", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + sessionStorage.getItem("token"),
@@ -25,7 +25,7 @@ const VolunteerList = () => {
   }
 
   const handleDelete = (id) => {
-    fetch("http://localhost:5000/volunteering/delete-volunteering/" + id, {
+    fetch("https://charity-world.herokuapp.com/volunteering/delete-volunteering/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -10,7 +10,7 @@ const UserDashboard = () => {
   }, []);
 
   const getEvents = () => {
-    fetch("http://localhost:5000/volunteering", {
+    fetch("https://charity-world.herokuapp.com/volunteering", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + sessionStorage.getItem("token"),
@@ -23,7 +23,7 @@ const UserDashboard = () => {
   };
 
   const  handleDelete =(id) => {
-    fetch("http://localhost:5000/volunteering/delete-volunteering/" + id, {
+    fetch("https://charity-world.herokuapp.com/volunteering/delete-volunteering/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())

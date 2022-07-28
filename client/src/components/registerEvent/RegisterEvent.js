@@ -12,7 +12,7 @@ const RegisterEvent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/event/" + id)
+    fetch("https://charity-world.herokuapp.com/event/" + id)
       .then((res) => res.json())
       .then((result) => {
         setEventImage(result.event_image);
@@ -21,7 +21,7 @@ const RegisterEvent = () => {
   }, [id]);
 
   const handleSubmit = () => {
-    fetch("http://localhost:5000/volunteering/add-volunteering", {
+    fetch("https://charity-world.herokuapp.com/volunteering/add-volunteering", {
       method: "POST",
       headers: {
         Authorization: "Bearer " + sessionStorage.getItem("token"),
